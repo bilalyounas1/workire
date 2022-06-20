@@ -1,0 +1,12 @@
+Workire/
+push
+pull
+start
+portal
+portal2
+*.pem
+job_data.json
+.DS_Store
+.DS_*
+.vs_code
+.vs_code/*

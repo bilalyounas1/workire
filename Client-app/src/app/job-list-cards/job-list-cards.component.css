@@ -1,0 +1,33 @@
+mat-card img{
+    object-fit: cover; /*this makes the image in src fit to the size specified below*/
+    border-radius: 0;
+    height: 100%;
+}
+
+mat-card {
+    border-radius: 20px;
+}
+
+.color-hover {
+    background-color: white;
+    color: black;
+}
+
+/* .color-hover:hover {
+    background-color: #006699;
+    color: white;
+} */
+
+/* mat-card:hover mat-card-subtitle {
+    color: white;
+}
+ */
+
+.no-pad {
+    padding: 0;
+    margin: 0;
+}
+
+.center {
+    margin: 0 auto;
+}

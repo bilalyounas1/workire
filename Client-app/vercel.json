@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "public": true,
+    "name": "workire-vercel",
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/api"
+        }
+    ],
+    "functions": {
+        "api/index.js": {
+            "includeFiles": "**",
+            "excludeFiles": "node_modules/**"
+        }
+    }
+}

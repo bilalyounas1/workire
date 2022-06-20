@@ -1,0 +1,31 @@
+#! /bin/sh
+
+if [ "$EUID" -eq 0 ]
+  then echo "Don't run as root"
+  exit
+fi
+
+echo "Moving to Project folder! "
+cd ~/Project-workire
+echo "In : "
+pwd
+echo "Pulling from git ..."
+git pull origin master
+
+echo "Moving into Server Application..."
+cd ~/Project-workire/Server-app
+docker-compose down
+docker-compose up -d
+echo ""
+echo "Deployed the server"
+
+echo "Moving into Client Application..."
+cd ~/Project-workire/Client-app
+echo "In: "
+pwd
+echo ""
+echo "Running deploy service..."
+npm run deploy
+
+echo "Restarting Nginx!!!"
+sudo service nginx restart

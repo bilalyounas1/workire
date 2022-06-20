@@ -1,0 +1,42 @@
+<div class="light-bg pt-5">
+    <div class="container">
+        <div class="row py-5" [ngClass]="{'pt-5':!isMobile}">
+            <div class="col-md-4 py-3 col-12 text-left h2 font-weight-bold my-auto text-center" style="font-size: xxx-large;">
+                Job-Seeker’s <br> Best Friend
+            </div>
+            <div class="col-md-8 col-12 text-muted text-left my-auto" style="font-size: medium;line-height: 20pt;">
+                Workire is an emerging job site in the UK and Gulf Region, connecting job seekers with potential
+                employers by giving regular job updates along with ATS resume builder, professional resume writing
+                service, mock interviews and free resume review. Our vision is to provide the job seekers with the best
+                journey to their dream job. And our mission is to be the number one choice of job seekers by connecting
+                them with their dream career opportunities. By filtering the vacancies only from direct company and
+                verified career websites, we bring job updates from all the major gulf countries and the UK.
+            </div>
+        </div>
+    </div>
+    <div class="backgroundSecondary py-5">
+        <div class="container">
+          <div class="h1 text-center pt-4 Weight550">
+            <div>Learn and Grow <span class="blue-color">Professionally</span></div>
+          </div>
+          <div class="row mt-4">
+            <div *ngFor="let k of blogPost" class="curse col-xm-12 col-sm-6 col-md-6 col-lg-4 my-3">
+                <div class="card shadow-sm h-100" [routerLink]="['/career-advice',k.BlogUrl]">
+                    <img class="card-img" src={{urlParseBlog(k.image)}} alt={{k.title}} height="240px" loading="lazy">
+                    <div class="card-img-overlay"> 
+                        <a [routerLink]="['/career-advice',k.category]" class="btn btn-sm btn-bg">{{k.category}}</a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title h5">{{cap(k.title)}}</h4>
+                    </div>
+              </div>
+          </div>
+          <br />
+          <br />
+          <div class="horiCenter pt-4">
+            <button class="btn-display btn-bg2" [routerLink]="['/career-advice']">View All Blogs</button>
+          </div>
+        </div>
+    </div>
+    <app-front-box2></app-front-box2>
+</div>

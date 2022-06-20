@@ -1,0 +1,23 @@
+.details {
+    border-bottom: 3px solid sandybrown;
+}
+
+.details:hover {
+    border-bottom: 3px solid black;
+}
+
+.hell {
+    text-decoration:none;
+}
+
+.hell:hover {
+    text-decoration:underline;
+}
+
+.makeItRound {
+    border-radius: 20px;
+}
+
+.center {
+    margin: 0 auto;
+}

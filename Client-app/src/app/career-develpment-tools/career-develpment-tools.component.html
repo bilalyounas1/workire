@@ -1,0 +1,198 @@
+<div class="text-center my-5">
+    <div class="titleTop"> 
+        Level Up Your 
+        <div class="pad"><span class="blue-color">Career</span></div>
+    </div>
+</div>
+<p class="text-muted text-center mb-5">Career Development Tools to get you on exact route!</p>
+
+<div class="container">
+    <div class="row my-5 mx-5" [ngClass]="{'pt-5':!isMobile}">
+        <div class="col-md-3 py-3 col-12 text-left h2 weight550 my-auto">
+            Professional <br>Career Help
+        </div>
+        <div class="col-md-9 col-12 text-muted text-left">
+            Bringing your career dreams into reality, Workire enables you land your dream job providing accurate
+            resume assistance by professional resume writers. Partnering with TopResume, one of the leading
+            Professional resume writing services, Workire helps you get the resume you need in order to take the
+            next step in your career along with free resume review. Our association with My Interview Practice
+            offers you with online mock interview service to practice full-length interviews online. To upgrade your
+            skills, we also collaborate with Udemy to provide you the best courses that would suit your career
+            choice.
+        </div>
+    </div>
+</div>
+
+
+<div class="light-bg">
+    <hr class="my-5"/>
+ <!-- For Desktop View  -->
+<section *ngIf="!isMobile" class="container">
+    <div class="text-center pb-5 h2" style="font-weight: 500;"><span class="blue-color">Career Development Tools</span>  to Get You Hired</div>
+    <div class="row mb-5">
+        <div class="col-md-6 col-sm-12">
+            <img class="img-fluid w-100" src="/assets/ReviewMyResume.png" alt="Get Resume Review" loading="lazy"/>
+        </div>
+        <div class="col-md-6 col-sm-12 text-left my-auto mx-auto px-5">
+            <div class="h4 pb-3">How strong is your resume?</div>
+            <p class="h6" style="font-weight: 300;">
+                Get a free, confidential review from a resume expert. We review your resume comprehensively, so you get all the information you need.
+            </p>
+            <div class="h5 pt-1 font-weight-normal">
+                Feedback topics include:
+            </div>
+            <ul class="list-group list-group-flush" [ngClass]="{'w-75':!isMobile}">
+                <li class="list-group-item">Style & organization</li>
+                <li class="list-group-item">Writing & mechanics</li>
+                <li class="list-group-item">ATS analysis</li>
+            </ul>
+            <a target="_blank" [href]="link1" class="btn dark-bg white-color mt-3">Review My Resume</a>
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="col-md-6 col-sm-12 text-left my-auto mx-auto px-5">
+            <div class="h4 pb-3">Land your next job, faster.</div>
+            <p class="h6" style="font-weight: 300;">
+                Our professional resume-writing service has helped over 600,000 professionals land more interviews and get hired faster.
+            </p>
+            <div class="h5 pt-1 font-weight-normal">
+                Professionally written resume:
+            </div>
+            <ul class="list-group list-group-flush" [ngClass]="{'w-75':!isMobile}">
+                <li class="list-group-item">Helps you find a job faster</li>
+                <li class="list-group-item">Makes you more valuable in the eyes of recruiters</li>
+                <li class="list-group-item">Get noticed more</li>
+            </ul>
+            <a target="_blank" [href]="link2" class="btn dark-bg white-color mt-3">Write My Resume</a>
+        </div>
+        <div *ngIf="!isMobile" class="col-md-6 col-sm-12">
+            <img class="img-fluid w-100" src="/assets/WriteMyResume.png" alt="Get Resume Review" loading="lazy" />
+        </div>
+    </div>
+    <div class="row py-5">
+        <div class="col-md-6 col-sm-12">
+            <img class="img-fluid w-100" src="/assets/MockInterviewPractice.png" alt="Get Resume Review" loading="lazy" />
+        </div>
+        <div class="col-md-6 col-sm-12 text-left my-auto mx-auto px-5">
+            <div class="h4 pb-3">Master the interview & land a job worth loving.</div>
+            <p class="h6" style="font-weight: 300;">
+                Simulate realistic interviews for over 120 different job positions and level up your skills in no time.
+            </p>
+            <div class="h5 pt-1 font-weight-normal">
+                Benefits of online mock interview practice:
+            </div>
+            <ul class="list-group list-group-flush" [ngClass]="{'w-75':!isMobile}">
+                <li class="list-group-item">Simulate realistic interviews anywhere</li>
+                <li class="list-group-item">Put on the pressure with your built-In camera</li>
+                <li class="list-group-item">Watch your recorded interviews and improve</li>
+            </ul>
+            <a target="_blank" [href]="link3" class="btn dark-bg white-color mt-3">Learn More</a>
+        </div>
+    </div>
+    <div class="row py-5 w-100">
+        <div class="col-md-6 col-sm-12 text-left my-auto mx-auto px-5">
+            <div class="h4 pb-3">Learn New Skills.</div>
+            <p class="h6" style="font-weight: 300;">
+                Update your skills. Learn Anything and Everything at Udemy! Brush up on your skills to get the job you want. Find the right courses for your next career.
+            </p>
+            <div class="h5 pt-1 font-weight-normal">
+                Udemy online courses provide you with:
+            </div>
+            <ul class="list-group list-group-flush" [ngClass]="{'w-75':!isMobile}">
+                <li class="list-group-item">An affordable and flexible way to learn new skills</li>
+                <li class="list-group-item">World Class Instructors</li>
+                <li class="list-group-item">In Dept knowledge of emerging fields</li>
+            </ul>
+            <a target="_blank" [href]="link4" class="btn dark-bg white-color mt-3">Learn New Skill</a>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img class="img-fluid w-100" src="/assets/LearnNewSkill.png" alt="Get Resume Review" loading="lazy" />
+        </div>
+    </div>
+</section>
+
+ <!-- For Mobile Devices -->
+
+ <section *ngIf="isMobile" class="mx-3 light-bg">
+    <div class="text-center h2 pb-5" style="font-weight: 500;">Best career development tools to get you hired</div>
+
+     <!-- Tool 1 -->
+    <img class="img-fluid w-100" src="/assets/ReviewMyResume.png" alt="Get Resume Review" loading="lazy" />
+    <div class="text-left my-auto mx-auto pt-4 pb-5">
+        <div class="h4 pb-3">How strong is your resume?</div>
+        <p class="h6" style="font-weight: 300;">
+            Get a free, confidential review from a resume expert. We review your resume comprehensively, so you get all the information you need.
+        </p>
+        <div class="h5 pt-1 font-weight-normal">
+            Feedback topics include:
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Style & organization</li>
+            <li class="list-group-item">Writing & mechanics</li>
+            <li class="list-group-item">ATS analysis</li>
+        </ul>
+        <a target="_blank" [href]="link1" class="btn dark-bg white-color mt-3">Review My Resume</a>
+    </div>
+
+    <!-- Tool 2 -->
+    <img class="img-fluid w-100" src="/assets/WriteMyResume.png" alt="Get Resume Review" loading="lazy" />
+    <div class="text-left my-auto mx-auto pt-4 pb-5">
+        <div class="h4 pb-3">Land your next job, faster.</div>
+        <p class="h6" style="font-weight: 300;">
+            Our professional resume-writing service has helped over 600,000 professionals land more interviews and get hired faster.
+        </p>
+        <div class="h5 pt-1 font-weight-normal">
+            Professionally written resume:
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Helps you find a job faster</li>
+            <li class="list-group-item">Makes you more valuable in the eyes of recruiters</li>
+            <li class="list-group-item">Get noticed more</li>
+        </ul>
+        <a target="_blank" [href]="link2" class="btn dark-bg white-color mt-3">Write My Resume</a>
+    </div>
+
+    <!-- Tool 3 -->
+    <img class="img-fluid w-100" src="/assets/MockInterviewPractice.png" alt="Get Resume Review" loading="lazy" />
+    <div class="text-left my-auto mx-auto pt-4 pb-5">
+        <div class="h4 pb-3">Master the interview & land a job worth loving.</div>
+        <p class="h6" style="font-weight: 300;">
+            Simulate realistic interviews for over 120 different job positions and level up your skills in no time.
+        </p>
+        <div class="h5 pt-1 font-weight-normal">
+            Benefits of online mock interview practice:
+        </div>
+        <ul class="list-group list-group-flush" [ngClass]="{'w-75':!isMobile}">
+            <li class="list-group-item">Simulate realistic interviews anywhere</li>
+            <li class="list-group-item">Put on the pressure with your built-In camera</li>
+            <li class="list-group-item">Watch your recorded interviews and improve</li>
+        </ul>
+        <a target="_blank" [href]="link3" class="btn dark-bg white-color mt-3">Learn More</a>
+    </div>
+
+     <!-- Tool 4 -->
+    <img class="img-fluid w-100" src="/assets/LearnNewSkill.png" alt="Get Resume Review" loading="lazy" />
+    <div class="text-left my-auto mx-auto pt-4 pb-5">
+        <div class="h4 pb-3">Learn New Skills.</div>
+        <p class="h6" style="font-weight: 300;">
+            Update your skills. Learn Anything and Everything at Udemy! Brush up on your skills to get the job you want. Find the right courses for your next career.
+        </p>
+        <div class="h5 pt-1 font-weight-normal">
+            Udemy online courses provide you with:
+        </div>
+        <ul class="list-group list-group-flush" [ngClass]="{'w-75':!isMobile}">
+            <li class="list-group-item">An affordable and flexible way to learn new skills</li>
+            <li class="list-group-item">World Class Instructors</li>
+            <li class="list-group-item">In Dept knowledge of emerging fields</li>
+        </ul>
+        <a target="_blank" [href]="link4" class="btn dark-bg white-color mt-3">Learn New Skill</a>
+    </div>
+</section>
+<!-- <app-front-box2></app-front-box2> -->
+<h1 style="visibility: hidden;display:none">Career Development Tools to Get You Hired</h1>
+<h2 style="visibility: hidden;display:none">Level Up Your Career</h2>
+<h3 style="visibility: hidden;display:none">How strong is your resume?</h3>
+<h3 style="visibility: hidden;display:none">Master the interview & land a job worth loving.</h3>
+<h3 style="visibility: hidden;display:none">Learn New Skills</h3>
+<h3 style="visibility: hidden;display:none">Land your next job, faster.</h3>
+</div>

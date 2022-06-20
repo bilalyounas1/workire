@@ -1,0 +1,139 @@
+<!-- Footer -->
+<footer class="page-footer font-small pt-3" style="background-color: #f5f7fb;">
+    <div class="" [ngClass]="{'container':!isMobile,'container-fluid':isMobile}">
+      <div *ngIf="isRoot; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>
+        <div class="ml-2 text-muted pointer">Home</div>
+      </ng-template>
+      <ng-template #elseBlock>
+        <div class="row mx-2">
+          <div *ngFor="let item of breadCrums; let i = index;">
+            <span [innerHtml]="arrowOrNot(i)" class="text-muted"></span>
+            <a href={{item[1]}} class="link-white text-muted">&nbsp;{{strRepDash(item[0]) | titlecase}}</a>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+    <div class="container">
+      <hr/>
+    </div>
+    <!-- Footer Links -->
+    <div class="text-center text-md-left text-muted" [ngClass]="{'container':!isMobile,'container-fluid':isMobile}">
+
+      <!-- Grid row -->
+      <div class="row pr-5 pl-4">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 px-0 mt-3">
+
+          <!-- Content -->
+          <a href="/">
+            <!-- Logo Image -->
+            <img src="/assets/Workire-jobs-uk-uae-qatar-dubai-london.svg" title="Home" width="150" alt="Workire" class="d-inline-block align-middle mb-2" alt="Workire" loading="lazy" />
+            <!-- Logo Text -->
+          </a>
+          <p class="text-muted">Workire is a free job site that posts jobs in the UK, UAE, Qatar, Dubai, and London as well as provides access to career advice and development tools.Giving regular job updates, we help job seekers grab their dream career.</p>
+          <div class="d-flex-inline mb-3" *ngIf="!isMobile">
+            <a href='https://www.facebook.com/workire' rel="noreferrer" target="_blank" class="mr-1">
+                <img class="img-fluid" src="/assets/fb.png" width="20" alt="Workire Facebook Page" loading="lazy" />
+            </a>
+            <a href='https://www.instagram.com/workire.co' rel="noreferrer" target="_blank" class="mx-2">
+                <img class="img-fluid" src="/assets/insta.png" width="20" rel="noopener" alt="Workire Instagram" loading="lazy" />
+            </a>
+            <a href='https://www.linkedin.com/company/workire/' rel="noreferrer" target="_blank" class="mx-2">
+              <img class="img-fluid" src="/assets/in.png" width="20" rel="noopener" alt="Workire LinkedIn" loading="lazy" />
+            </a>
+          </div>
+
+          <div style="display: flex;justify-content: center;" *ngIf="isMobile">
+            <a href='https://www.facebook.com/workire' target="_blank" rel="noopener" class="mr-1">
+                <img class="img-fluid" src="/assets/fb.png" width="20" alt="Workire Facebook Page" loading="lazy" />
+            </a>
+            <a href='https://www.instagram.com/workire.co' target="_blank" rel="noopener" class="mx-2">
+                <img class="img-fluid" src="/assets/insta.png" width="20" alt="Workire Instagram" loading="lazy" />
+            </a>
+            <a href='https://www.linkedin.com/company/workire/' rel="noreferrer" target="_blank" class="mx-2">
+              <img class="img-fluid" src="/assets/in.png" width="20" rel="noopener" alt="Workire LinkedIn" loading="lazy" />
+            </a>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <div class="col-md-2 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h4 class="text font-weight-bold">Company</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a [routerLink]="['/about-us']" class="text-muted">About US</a>
+            </li>
+            <li>
+              <a [routerLink]="['/contact-us']" class="text-muted">Contact US</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- Grid column -->
+        <div class="col-md-2 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h4 class="text font-weight-bold">Job Search</h4>
+
+            <ul class="list-unstyled">
+              <li>
+                <a [routerLink]="['Jobs']" class="text-muted">Find All Jobs</a>
+              </li>
+              <li>
+                <a [routerLink]="['Jobs/All-Categories']" class="text-muted">Jobs By Categories</a>
+              </li>
+              <li>
+                <a [routerLink]="['Jobs/All-Countries']" class="text-muted">Jobs By Location</a>
+              </li>
+              <li>
+                <a [routerLink]="['Jobs/All-Companies']" class="text-muted">Jobs By Companies</a>
+              </li>
+              <li>
+                <a [routerLink]="['/Jobs/All-Positions']" class="text-muted">Jobs by Designation</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h4 class="text font-weight-bold">Career Help</h4>
+
+            <ul class="list-unstyled">
+              <li>
+                <a [routerLink]="['/career-advice']" class="text-muted">Career Advice</a>
+              </li>
+              <li>
+                <a [routerLink]="['/Career-development-tools']" class="text-muted">Career Tools</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+    <hr *ngIf="isRoot" style="margin: 0;padding: 0;"/>
+    <!-- Copyright -->
+    <div class="text-center py-3 text-muted" *ngIf="isRoot">© {{currYear}} Copyright:
+      <span class="text-dark"> workire.com. All Rights Reserved. </span>
+      <a href="/disclaimer" class="text-muted"><u>Disclaimer</u></a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->

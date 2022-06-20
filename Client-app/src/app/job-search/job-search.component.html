@@ -1,0 +1,43 @@
+<div class="text-center mb-5 mt-5">
+    <div class="titleTop">
+        Get the <span class="black-color">Right Job</span>
+        <div class="pad">You <span class="blue-color">Deserve</span></div>
+    </div>
+    <h1 style="font-size: 1px;visibility: hidden;">Get The Right Job You Deserve</h1>
+    <p class="text-muted">{{totalJobs}}+ Jobs in UK, UAE, London, Dubai, Qatar</p>
+
+    <div class="row text-center mt-5" style="display: flex;justify-content: center;">
+        <div class="col-lg-6 col-md-8 col-sm-12 col-12">
+            <nz-input-group class="input1" [nzPrefix]="searchIcon" [nzSize]="'large'">
+                <input type="text"  nz-input placeholder="Job Title or keyword" [(ngModel)]="search"/>
+            </nz-input-group>
+            <ng-template #searchIcon>
+                <mat-icon [ngClass]="{'blue-color':search.length}">search</mat-icon>
+            </ng-template>
+
+            <nz-input-group class="input2" [nzPrefix]="locationIcon" [nzSuffix]="searchBtn" [nzSize]="'large'" *ngIf="!isMobile">
+                <input type="text"  nz-input placeholder="City or Country" [(ngModel)]="country" (input)="inputGiven($event)" [nzAutocomplete]="auto" />
+                <nz-autocomplete [nzDataSource]="options" nzBackfill #auto></nz-autocomplete>
+            </nz-input-group>
+
+            <nz-input-group class="input1 mt-2" [nzPrefix]="locationIcon" [nzSize]="'large'" *ngIf="isMobile">
+                <input type="text"  nz-input placeholder="City or Country" [(ngModel)]="country" (input)="inputGiven($event)" [nzAutocomplete]="auto" />
+                <nz-autocomplete [nzDataSource]="options" nzBackfill #auto></nz-autocomplete>
+            </nz-input-group>
+
+            <button mat-raised-button class="btnPrime w-100 mt-2 pad2" (click)="submitClicked()" *ngIf="isMobile">
+                Search
+            </button>
+
+            <ng-template #locationIcon>
+                <mat-icon [ngClass]="{'blue-color':country.length}"> location_on</mat-icon>
+            </ng-template>
+            <ng-template #searchBtn>
+                <button mat-raised-button class="btnPrime" (click)="submitClicked()" >
+                    Search
+                </button>
+            </ng-template>
+        </div>
+    </div>
+</div>
+<h1 style="visibility: hidden;display:none">{{totalJobs}}+ Jobs in UK, UAE, London, Dubai, Qatar</h1>

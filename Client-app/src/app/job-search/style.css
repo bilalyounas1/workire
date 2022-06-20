@@ -1,0 +1,120 @@
+/* Large View Ports  */
+@media screen and (min-width: 900px) {
+    .titleTop {
+        padding-top: 5%;
+        font-weight: 550;
+        font-size: 5vw;
+    }
+    .pad {
+        padding-top: 4%;
+    }
+    .btnPrime {
+        border-radius: 25px;
+        color: white;
+        background-color: #006699;
+        width: 100px;
+    }
+    /* Common For all  */
+    .input1 {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-right: none;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+        width: 45%;
+        box-shadow: none;
+        height: 50px;
+    }
+
+    .input1:focus{
+        box-shadow: none;
+    }
+}
+
+
+/* Medium View Ports */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    .titleTop {
+        padding-top: 5%;
+        font-weight: 550;
+        font-size: 7vw;
+    }
+    .pad {
+        padding-top: 5%;
+    }
+    .btnPrime {
+        border-radius: 25px;
+        color: white;
+        /* background-color: #3a36ad; */
+        background-color: #006699;
+        width: 100px;
+    }
+    /* Common For all  */
+    .input1 {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-right: none;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+        width: 45%;
+        box-shadow: none;
+        height: 50px;
+    }
+
+    .input1:focus{
+        box-shadow: none;
+    }
+}
+
+
+/* Small View Ports  */
+@media screen and (max-width: 600px) {
+    .titleTop {
+        padding-top: 5%;
+        font-weight: 550;
+        font-size: 10vw;
+    }
+    .pad {
+        padding-top: 6%;
+    }
+    .btnPrime {
+        border-radius: 25px;
+        color: white;
+        background-color: #006699;
+        width: 10px;
+    }
+    /* Common For all  */
+    .input1 {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 25px;
+        width: 100%;
+        box-shadow: none;
+        height: 50px;
+    }
+
+    .input1:focus{
+        box-shadow: none;
+    }
+}
+
+
+.input2 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 55%;
+    box-shadow: none;
+    height: 50px;
+}
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pad2 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}

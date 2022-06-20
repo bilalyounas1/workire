@@ -1,0 +1,67 @@
+mdb-navbar {
+    box-shadow: none;
+}
+
+.navbar {
+    box-shadow: none !important; 
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.fontStyle {
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.fontStyle2 {
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+@media (min-width : 995px)
+{
+    .fontStyle::after {
+        content: ""; /* This is necessary for the pseudo element to work. */ 
+        display: block; /* This will put the pseudo element on its own line. */
+        margin: 0 auto; /* This will center the border. */
+        width: 50%; /* Change this to whatever width you want. */
+        border-bottom: 2px solid transparent; /* This creates the border. Replace black with whatever color you want. */
+    }
+}
+
+.fontStyle:hover {
+    color: #006699;
+}
+
+@media (min-width : 995px)
+{
+    .fontStyle:hover::after {
+        content: ""; /* This is necessary for the pseudo element to work. */ 
+        display: block; /* This will put the pseudo element on its own line. */
+        margin: 0 auto; /* This will center the border. */
+        width: 50%; /* Change this to whatever width you want. */
+        border-bottom: 2px solid #006699; /* This creates the border. Replace black with whatever color you want. */
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.no-pad-mar {
+    padding: 0;
+    margin: 0;
+}

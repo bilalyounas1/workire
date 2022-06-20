@@ -1,0 +1,77 @@
+<div class="pt-4 pb-2" style="display: flex;justify-content: center;" *ngIf="!isMobile">
+    <nz-input-group class="" [nzPrefix]="searchIcon" [ngClass]="{'input':toggleView,'input-toggle':!toggleView}">
+        <input type="text"  nz-input placeholder="Job Title or keyword" [(ngModel)]="search"/>
+    </nz-input-group>
+    <ng-template #searchIcon>
+        <mat-icon [ngClass]="{'blue-color':search.length}">search</mat-icon>
+    </ng-template>
+
+    <nz-input-group class="" [nzPrefix]="locationIcon" [ngClass]="{'input':toggleView,'input-toggle':!toggleView}">
+        <input type="text" nz-input placeholder="City or Country" [(ngModel)]="country" [nzAutocomplete]="autoCountry" />
+        <nz-autocomplete [nzDataSource]="retOptions(countryList,country)" nzBackfill #autoCountry></nz-autocomplete>
+    </nz-input-group>
+    <ng-template #locationIcon>
+        <mat-icon [ngClass]="{'blue-color':country.length}"> location_on</mat-icon>
+    </ng-template>
+
+    <nz-input-group class="" [nzPrefix]="categoryIcon" [ngClass]="{'input':toggleView,'input-toggle':!toggleView}">
+      <input type="text" nz-input placeholder="Category or Keywords" [(ngModel)]="category" [nzAutocomplete]="autoCategory" />
+      <nz-autocomplete [nzDataSource]="retOptions(catList,category)" nzBackfill #autoCategory></nz-autocomplete>
+    </nz-input-group>
+    <ng-template #categoryIcon>
+      <mat-icon [ngClass]="{'blue-color':category.length}" > category</mat-icon>
+    </ng-template>
+
+    <nz-input-group class="" [nzPrefix]="companyIcon" [ngClass]="{'input':toggleView,'input-toggle':!toggleView}">
+      <input type="text" nz-input placeholder="Company or keywords" [(ngModel)]="company" [nzAutocomplete]="autoCompany" />
+      <nz-autocomplete [nzDataSource]="retOptions(compList,company)" nzBackfill #autoCompany></nz-autocomplete>
+    </nz-input-group>
+    <ng-template #companyIcon>
+        <mat-icon [ngClass]="{'blue-color':company.length}" >home</mat-icon>
+    </ng-template>
+
+    <nz-input-group class="input-toggle" [nzPrefix]="clockIcon" *ngIf="!toggleView">
+      <nz-select [(ngModel)]="days" class="my-auto select-style" (ngModelChange)="setTime()" [nzBorderless]="true">
+        <nz-option [nzValue]="0" nzLabel="Anytime"></nz-option>
+        <nz-option [nzValue]="1" nzLabel="A Day ago"></nz-option>
+        <nz-option [nzValue]="7" nzLabel="A Week ago"></nz-option>
+        <nz-option [nzValue]="30" nzLabel="A Month ago"></nz-option>
+      </nz-select>
+    </nz-input-group>
+    <ng-template #clockIcon>
+      <mat-icon [ngClass]="{'blue-color':company.length}" >schedule</mat-icon>
+    </ng-template>
+
+    <button mat-raised-button class="btnPrime" (click)="applyFilter()">Search</button>
+</div>
+
+<div *ngIf="isMobile" class="pt-4" style="display: flex;justify-content: center;">
+  <nz-input-group class="input" [nzPrefix]="MobilePrefix">
+    <input type="text" nz-input placeholder={{mobileObj[selectedFilter].placeholder}} [(ngModel)]="mobInp" [nzAutocomplete]="autoCompany" (change)="mobileApply()" />
+    <nz-autocomplete [nzDataSource]="retOptions(mobileObj[selectedFilter].list,mobInp)" nzBackfill #autoCompany></nz-autocomplete>
+  </nz-input-group>
+  <ng-template #MobilePrefix>
+      <mat-icon [ngClass]="{'blue-color':mobInp.length}">{{mobileObj[selectedFilter].icon}}</mat-icon>
+  </ng-template>
+  <button mat-button class="btnPrime" (click)="mobileApply()"><mat-icon>search</mat-icon></button>
+  <button mat-button nz-dropdown [nzDropdownMenu]="menu4">
+    <mat-icon>filter_list</mat-icon>
+  </button>
+  <nz-dropdown-menu #menu4="nzDropdownMenu">
+    <ul nz-menu>
+      <li nz-menu-item *ngFor="let item of MobileFilters" (click)="selcted(item)">{{item}}</li>
+    </ul>
+  </nz-dropdown-menu>
+</div>
+
+<div class="row my-3 pl-2">
+  <div class="col-auto" *ngFor="let item of parseObj(filterChips)">
+    <mat-chip-list>
+      <mat-chip *ngFor="let chip of filterChips[item]" class="mx-2" [removable]="true" (removed)="removeChip(item,chip)">
+        <mat-icon>{{item}}</mat-icon>
+        {{chip}}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+</div>
