@@ -1,8 +1,6 @@
-[![Workire logo](https://workire.com/assets/logo-black.png)](https://github.com/WaseemSabir/Project-workire)
+[![Workire logo](https://workire.com/assets/logo-black.png)]
 
 # Workire
-
-[![Deployment](https://github.com/WaseemSabir/Project-workire/actions/workflows/production_deploy.yml/badge.svg)](https://github.com/WaseemSabir/Project-workire/actions/workflows/production_deploy.yml)
 
 This is the source code for a production application, deployed at [workire](https://workire.com), with a 90+ Performance, Accessibility, Best Practice and SEO rating with lighthouse.
 
@@ -25,7 +23,7 @@ Install the bundles and follow along to get the app running on your machine.
 Clone the Repo and go into main folder.
 
 ```bash
-git clone https://github.com/WaseemSabir/Project-workire.git
+git clone https://github.com/bilalyounas1/workire.git
 cd Project-workire
 ```
 
@@ -55,5 +53,3 @@ It is recommended that you should create a virtual python enviorment before inst
 
 For the server application to work, you will also need to set .env in project folder inside server-app with your django and database secrets.
 
-## License
-It is not allowed to use any code from the repo for any production or bussiness purposes without [Author](https://github.com/WaseemSabir)'s permission.
